@@ -1,8 +1,6 @@
 public class ReferenceBook extends Book {
-    public ReferenceBook(String author, String title, String genre, String publisher, int yearReleased,
-            boolean loanable, int daysLoanable, double lateCharges, boolean reservable, int daysReservable,
-            int numOfPages) {
-        super(author, title, genre, yearReleased, loanable, daysLoanable, lateCharges, reservable, daysReservable,
-                numOfPages);
+    public ReferenceBook(String author, String title, String genre, int yearReleased, int numOfPages,
+            boolean canBeLoaned) {
+        super(author, title, genre, yearReleased, numOfPages, canBeLoaned);
     }
 }

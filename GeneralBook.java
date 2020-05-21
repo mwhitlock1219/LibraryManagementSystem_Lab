@@ -1,7 +1,14 @@
 public class GeneralBook extends Book {
-    public GeneralBook(String author, String title, String genre, String publisher, int yearReleased, boolean loanable,
-            int daysLoanable, double lateCharges, boolean reservable, int daysReservable, int numOfPages) {
-        super(author, title, genre, publisher, yearReleased, loanable, daysLoanable, lateCharges, reservable,
-                daysReservable, numOfPages);
+    public GeneralBook(String author, String title, String genre, int yearReleased, int numOfPages,
+            boolean canBeLoaned) {
+        super(author, title, genre, yearReleased, numOfPages, canBeLoaned);
+    }
+
+    public boolean hasAuthor(Author x) {
+        if (x != null) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

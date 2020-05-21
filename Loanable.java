@@ -1,5 +1,5 @@
 interface Loanable {
-    public void isLoanable(boolean loanable);
+    public boolean isLoanable(boolean canBeLoaned);
 
     public void lateCharge(int charge);
 }
