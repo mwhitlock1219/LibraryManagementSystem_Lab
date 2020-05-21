@@ -1,0 +1,3 @@
+public enum IssueRelease {
+    DAILY, WEEKLY, BIWEEKLY, MONTHLY, BIMONTHLY, ANNUALLY
+}

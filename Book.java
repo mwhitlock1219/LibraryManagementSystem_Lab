@@ -1,9 +1,9 @@
 public class Book extends LibraryItem {
     private int numOfPages;
 
-    public Book(String author, String title, String genre, int yearReleased, boolean loanable, int daysLoanable,
-            double lateCharges, boolean reservable, int daysReservable, int numOfPages) {
-        super(author, title, genre, yearReleased, loanable, daysLoanable, lateCharges, reservable, daysReservable);
+    public Book(String author, String title, String genre, String publisher, int yearReleased, boolean loanable,
+            int daysLoanable, double lateCharges, boolean reservable, int daysReservable, int numOfPages) {
+        super(author, title, genre, publisher, yearReleased, loanable, daysLoanable, lateCharges, reservable, daysReservable);
         this.numOfPages = numOfPages;
 
     }

@@ -1,18 +1,13 @@
 public class LibraryItem implements Loanable, Reservable {
     // Abstraction of Properties
-    private String author;
-    private String title;
-    private String genre;
-    private int yearReleased;
-    private boolean loanable;
-    private int daysLoanable;
+    private String author, title, genre, publisher;
+    private int yearReleased, daysLoanable, daysReservable;
+    private boolean loanable, reservable;
     private double lateCharges;
-    private boolean reservable;
-    private int daysReservable;
 
     // Constructor (properties)
-    public LibraryItem(String author, String title, String genre, int yearReleased, boolean loanable, int daysLoanable,
-            double lateCharges, boolean reservable, int daysReservable) {
+    public LibraryItem(String author, String title, String genre, String publisher, int yearReleased, boolean loanable,
+            int daysLoanable, double lateCharges, boolean reservable, int daysReservable) {
         this.author = author;
         this.title = title;
         this.genre = genre;
@@ -22,6 +17,7 @@ public class LibraryItem implements Loanable, Reservable {
         this.lateCharges = lateCharges;
         this.reservable = reservable;
         this.daysReservable = daysReservable;
+        this.publisher = publisher;
     }
 
     // Getters - use keyword return
@@ -61,6 +57,10 @@ public class LibraryItem implements Loanable, Reservable {
         return daysReservable;
     }
 
+    public String getPublisher() {
+        return publisher;
+    }
+
     // Setters - use keyword this
     public void setAuthor(String author) {
         this.author = author;
@@ -98,10 +98,30 @@ public class LibraryItem implements Loanable, Reservable {
         this.daysReservable = daysReservable;
     }
 
-    // loanable abstract method
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
+    }
+
+    // loanable abstract methods
     public void lateCharge(int charge) {
         lateCharges = charge; // fix later by calculating late charge
     };
+
+    public boolean isLoanable(boolean loanable) {
+        if (this.loanable) {
+            return this.loanable + ", can be loaned for " + this.daysLoanable + "days.";
+        } else {
+            return this.loanable + ", can not be loaned.";
+        }
+    }
+
+    public boolean isReservable(boolean reservable) {
+        if (this.reservable) {
+            return this.title + " can be reserved for " + this.daysLoanable + "days.";
+        } else {
+            return this.title + " can not be reserved.";
+        }
+    }
 
     @Override
     public String toString() {
