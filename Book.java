@@ -1,11 +1,22 @@
 public class Book extends LibraryItem implements Loanable {
+    private Author authorName;
     private int numOfPages;
     private boolean canBeLoaned;
 
-    public Book(String author, String title, String genre, int yearReleased, int numOfPages, boolean canBeLoaned) {
-        super(author, title, genre, yearReleased);
+    public Book(String title, Author authorName, int numOfPages, boolean canBeLoaned) {
+        super(title);
         this.numOfPages = numOfPages;
         this.canBeLoaned = canBeLoaned;
+        this.authorName = authorName;
+    }
+
+    // Getting and Setting Author author
+    public Author getAuthorName() {
+        return authorName;
+    }
+
+    public void setAuthorName(Author authorName) {
+        this.authorName = authorName;
     }
 
     // Getters
@@ -27,7 +38,7 @@ public class Book extends LibraryItem implements Loanable {
     }
 
     @Override
-    // loanable abstract methods
+    // Implementing loanable abstract methods
     public void lateCharge(int charge) {
         int lateCharges;
         lateCharges = charge; // * daysOverDue; // fix later by calculating late charge
@@ -40,4 +51,22 @@ public class Book extends LibraryItem implements Loanable {
             return false;
         }
     }
+
+    // public class Author {
+    // private String authorName;
+
+    // public Author() {
+    // this.authorName = null;
+    // }
+
+    // public Author(String authorName) {
+    // this.authorName = authorName;
+    // }
+
+    // public String getAuthorName() {
+    // return authorName;
+    // }
+    // }
+
+    // public Author author;
 }

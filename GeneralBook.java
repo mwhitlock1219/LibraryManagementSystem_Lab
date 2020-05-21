@@ -1,14 +1,21 @@
+import java.util.List;
+
 public class GeneralBook extends Book {
-    public GeneralBook(String author, String title, String genre, int yearReleased, int numOfPages,
-            boolean canBeLoaned) {
-        super(author, title, genre, yearReleased, numOfPages, canBeLoaned);
+    public GeneralBook(String title, Author authorName, int numOfPages, boolean canBeLoaned) {
+        super(title, authorName, numOfPages, canBeLoaned);
     }
 
-    public boolean hasAuthor(Author x) {
-        if (x != null) {
-            return true;
-        } else {
-            return false;
+    public static void display(List<GeneralBook> gbooks) {
+        for (GeneralBook g : gbooks) {
+            System.out.println(g.toString() + " is a book");
         }
+
     }
+    // public boolean hasAuthor(Author x) {
+    // if (x != null) {
+    // return true;
+    // } else {
+    // return false;
+    // }
+    // }
 }

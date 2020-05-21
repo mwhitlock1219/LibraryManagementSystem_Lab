@@ -1,11 +1,11 @@
-public class OverDueList<E extends Book> {
+public class OverdueList<E extends Book> {
     private E overDueItem;
 
-    public OverDueList(E overDueItem) {
+    public OverdueList(E overDueItem) {
         this.overDueItem = overDueItem;
     }
 
-    public E getOverDueItem() {
+    public E getOverdueItem() {
         return this.overDueItem;
     }
 

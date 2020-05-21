@@ -1,14 +1,24 @@
 public class Periodical extends LibraryItem implements Reservable {
-
+    private PublishingCompany publisher;
     private IssueRelease issueReleased;
     private boolean canBeReserved;
 
-    public Periodical(String author, String title, String genre, int yearReleased, IssueRelease issueReleased,
-            boolean canBeReserved) {
-        super(author, title, genre, yearReleased);
+    public Periodical(String title, IssueRelease issueReleased, PublishingCompany publisher, boolean canBeReserved) {
+        super(title);
 
         this.issueReleased = issueReleased;
         this.canBeReserved = canBeReserved;
+        this.publisher = publisher;
+
+    }
+
+    // Getting and Setting PublishingCompany publish
+    public PublishingCompany getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(PublishingCompany publisher) {
+        this.publisher = publisher;
     }
 
     // Getters
@@ -58,5 +68,4 @@ public class Periodical extends LibraryItem implements Reservable {
                 break;
         }
     }
-
 }
