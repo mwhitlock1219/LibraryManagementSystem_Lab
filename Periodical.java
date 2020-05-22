@@ -66,6 +66,8 @@ public class Periodical extends LibraryItem implements Reservable {
             case ANNUALLY:
                 released = "released Annually";
                 break;
+            default:
+                break;
         }
     }
 }

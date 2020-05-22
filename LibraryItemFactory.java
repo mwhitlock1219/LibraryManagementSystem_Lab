@@ -1,3 +1,5 @@
+//Depending on the type of Library Item given it will create a new instance of that item
+
 public class LibraryItemFactory {
     public static LibraryItem CreateLibraryItem(LibraryItemType type) {
         LibraryItem d = null;
@@ -9,7 +11,7 @@ public class LibraryItemFactory {
         }
         switch (type) {
             case GENERALBOOK:
-                d = new GeneralBook(title, authorName, numOfPages, canBeLoaned);
+                d = new GeneralBook("Free Time", newAuthor, 10, GenreType.FANTASY, true);
                 break;
             case REFERENCEBOOK:
                 d = new ReferenceBook("Java for Dummies", newAuthor, 100, true);
