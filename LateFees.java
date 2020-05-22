@@ -1,3 +1,3 @@
 public enum LateFees {
-    WEEKLY
+    DAILY, WEEKLY, MONTHLY
 }

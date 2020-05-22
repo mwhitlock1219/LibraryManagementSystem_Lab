@@ -5,8 +5,8 @@ public class CardHolder {
     private String name;
     private boolean canCheckout;
     private boolean canReserve;
-    private List<String> loanedOverdue;
-    private ArrayList<Periodical> reservedOverdue;
+    private List<Book> loanedOverdue = new ArrayList<>();
+    private List<Periodical> reservedOverdue = new ArrayList<>();
 
     public CardHolder(String name, boolean canCheckout, boolean canReserve) {
         this.name = name;

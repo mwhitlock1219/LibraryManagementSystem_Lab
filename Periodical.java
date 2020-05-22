@@ -52,19 +52,19 @@ public class Periodical extends LibraryItem implements Reservable {
         String released = "NOT RELEASED";
         switch (this.issueReleased) {
             case DAILY:
-                released = "Released Daily";
+                released = "released Daily";
                 break;
             case WEEKLY:
-                released = "Released Weekly";
+                released = "released Weekly";
                 break;
             case BIWEEKLY:
-                released = "Released Bi-Weekly";
+                released = "released Bi-Weekly";
                 break;
             case MONTHLY:
-                released = "Released Monthly";
+                released = "released Monthly";
                 break;
             case ANNUALLY:
-                released = "Released Annually";
+                released = "released Annually";
                 break;
         }
     }

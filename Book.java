@@ -39,11 +39,13 @@ public class Book extends LibraryItem implements Loanable {
 
     @Override
     // Implementing loanable abstract methods
-    public void lateCharge(int charge) {
-        int lateCharges;
-        lateCharges = charge; // * daysOverDue; // fix later by calculating late charge
+    public void lateCharge(int daysLate) {
+        double charge = 0.25;
+        double lateCharge = charge * daysLate;
+        System.out.println(lateCharge);
     };
 
+    @Override
     public boolean isLoanable(boolean canBeLoaned) {
         if (this.canBeLoaned) {
             return true;
@@ -52,21 +54,4 @@ public class Book extends LibraryItem implements Loanable {
         }
     }
 
-    // public class Author {
-    // private String authorName;
-
-    // public Author() {
-    // this.authorName = null;
-    // }
-
-    // public Author(String authorName) {
-    // this.authorName = authorName;
-    // }
-
-    // public String getAuthorName() {
-    // return authorName;
-    // }
-    // }
-
-    // public Author author;
 }

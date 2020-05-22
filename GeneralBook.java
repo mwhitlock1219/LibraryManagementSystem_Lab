@@ -11,11 +11,4 @@ public class GeneralBook extends Book {
         }
 
     }
-    // public boolean hasAuthor(Author x) {
-    // if (x != null) {
-    // return true;
-    // } else {
-    // return false;
-    // }
-    // }
 }
